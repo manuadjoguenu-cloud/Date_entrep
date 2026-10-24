@@ -9,15 +9,15 @@
   <link rel="shortcut icon" href="favicon.ico">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <meta name="theme-color" content="#050505">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://api.fontshare.com">
+  <link rel="preconnect" href="https://cdn.fontshare.com" crossorigin>
+  <link href="https://api.fontshare.com/v2/css?f[]=chillax@200,300,400,500,600,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/accueil.css">
 </head>
 <body>
 
 <header class="site-header">
-  <a href="#accueil" class="logo"><span>Date</span> Entrepreneur</a>
+  <a href="#accueil" class="logo" aria-label="Date Entrepreneur — retour à l'accueil"><img src="media/logo.png" alt="Date Entrepreneur, 2e édition" width="660" height="279"></a>
   <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-label="Ouvrir le menu">
   <label for="menu-toggle" class="burger" aria-hidden="true"><i></i><i></i><i></i></label>
   <nav>
@@ -55,12 +55,9 @@
 </section>
 
 <!-- À PROPOS -->
-<section id="apropos" class="section section-dark2">
-  <div class="container split">
-    <figure class="poster">
-      <img src="media/img1.jpeg" alt="Affiche « Le Date Entrepreneur, c'est quoi ? » : une figure dorée tend la main à une figure blanche" loading="lazy">
-    </figure>
-    <div>
+<section id="apropos" class="section section-dark2 bg-section bg-apropos">
+  <div class="container">
+    <div class="bg-text">
       <p class="eyebrow">À propos</p>
       <h2>Un espace de rencontres. <span>Un espace d'opportunités.</span></h2>
       <p>DATE ENTREPRENEUR est une rencontre entrepreneuriale qui rapproche les porteurs de projets, entrepreneurs, professionnels, experts et investisseurs. Son ambition est simple : faire de chaque échange une occasion d'apprendre, de se faire connaître ou d'envisager une collaboration.</p>
@@ -206,16 +203,13 @@
 </section>
 
 <!-- DÉMARQUE-TOI -->
-<section class="banner">
-  <div class="container split">
-    <div>
+<section class="banner bg-section bg-demarque">
+  <div class="container">
+    <div class="bg-text">
       <h2><span class="thin">DE</span><span class="light">MAR</span>QUES <strong>TOI !</strong></h2>
       <p class="lead">Dans un monde où tout le monde cherche à <b>réussir</b>, la <b>différence</b> se fait aussi par <b>les rencontres</b>, les idées et les opportunités que tu sais saisir. Prépare-toi à te faire remarquer, à créer des connexions et à saisir de <b>nouvelles opportunités</b>.</p>
       <a class="btn btn-primary" href="#contact">Je m'inscris</a>
     </div>
-    <figure class="poster">
-      <img src="media/img2.jpeg" alt="Affiche « Démarque-toi ! » : un homme au costume et chapeau jaunes parmi des hommes en noir" loading="lazy">
-    </figure>
   </div>
 </section>
 
@@ -251,6 +245,7 @@
 
 <footer class="site-footer">
   <div class="container">
+    <img class="footer-logo" src="media/logo.png" alt="Date Entrepreneur" width="660" height="279">
     <p>DATE ENTREPRENEUR — 2<sup>e</sup> édition · 19 décembre 2026 · Bio Hôtel, Lomé · Une initiative organisée par Best Regards Groupe.</p>
     <p><a href="#accueil">Accueil</a> · <a href="#apropos">À propos</a> · <a href="#programme">Programme</a> · <a href="#partenaires">Partenaires</a> · <a href="#contact">Contact</a></p>
   </div>

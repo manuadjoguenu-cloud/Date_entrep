@@ -1,4 +1,8 @@
-
+/* ==========================================================
+   DATE ENTREPRENEUR — 2e édition
+   Charte graphique reprise des affiches (img1, img2) :
+   noir profond · jaune #FFB901 · blanc · typo géométrique
+   ========================================================== */
 
 :root {
   --noir: #050505;
@@ -10,11 +14,11 @@
   --gris: #b9b9b9;
   --ligne: rgba(255, 255, 255, .14);
   --rayon: 20px;
-  --police: "Outfit", "Quicksand", "Poppins", system-ui, sans-serif;
+  --police: "Chillax", "Outfit", "Poppins", system-ui, sans-serif;
 }
 
 *, *::before, *::after { box-sizing: border-box; }
-html { scroll-behavior: smooth; scroll-padding-top: 76px; }
+html { scroll-behavior: smooth; scroll-padding-top: 96px; }
 body {
   margin: 0;
   background: var(--noir);
@@ -23,7 +27,6 @@ body {
   font-weight: 300;
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
-  user-select: none;
 }
 img { max-width: 100%; display: block; }
 a { color: inherit; }
@@ -34,9 +37,9 @@ p { margin: 0 0 1em; }
 
 /* ---------- Titres ---------- */
 h1, h2, h3 { line-height: 1.1; margin: 0 0 .6em; }
-h1 { font-weight: 900; font-size: clamp(2.6rem, 7vw, 5.2rem); letter-spacing: -.02em; }
+h1 { font-weight: 700; font-size: clamp(2.6rem, 7vw, 5.2rem); letter-spacing: -.02em; }
 h2 { font-weight: 300; font-size: clamp(1.9rem, 4.4vw, 3.2rem); letter-spacing: -.01em; }
-h2 span, h1 span { color: var(--jaune); font-weight: 900; }
+h2 span, h1 span { color: var(--jaune); font-weight: 700; }
 h3 { font-weight: 700; font-size: 1.2rem; }
 .eyebrow {
   color: var(--jaune);
@@ -59,8 +62,10 @@ h3 { font-weight: 700; font-size: 1.2rem; }
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--ligne);
 }
-.logo { text-decoration: none; font-weight: 900; text-transform: uppercase; letter-spacing: .04em; }
-.logo span { color: var(--jaune); }
+.logo { text-decoration: none; font-weight: 700; text-transform: uppercase; letter-spacing: .04em; }
+.logo { display: flex; align-items: center; }
+.logo img { height: 58px; width: auto; display: block; }
+.footer-logo { height: 52px; width: auto; margin-bottom: 1rem; }
 nav ul { list-style: none; display: flex; gap: 1.6rem; margin: 0; padding: 0; }
 nav a { text-decoration: none; font-weight: 500; font-size: .92rem; transition: color .2s; }
 nav a:hover { color: var(--jaune); }
@@ -132,6 +137,19 @@ nav a:hover { color: var(--jaune); }
   box-shadow: 0 0 0 1px var(--ligne), 0 30px 60px rgba(255, 185, 1, .12);
 }
 
+
+/* ---------- Sections avec image en arrière-plan ---------- */
+.bg-section { position: relative; overflow: hidden; isolation: isolate; }
+.bg-section::before {
+  content: ""; position: absolute; top: 0; right: 0; bottom: 0; z-index: -1;
+  background-repeat: no-repeat; background-size: cover; background-position: center;
+  -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 42%);
+          mask-image: linear-gradient(90deg, transparent 0, #000 42%);
+}
+.bg-apropos::before { width: 60%; background-image: url("../media/bg-apropos.jpg"); background-position: 40% center; }
+.bg-demarque::before { width: 66%; background-image: url("../media/bg-demarque.jpg"); }
+.bg-text { max-width: 540px; }
+
 /* ---------- Tags ---------- */
 .tags { list-style: none; display: flex; flex-wrap: wrap; gap: .7rem; padding: 0; margin: 1rem 0 0; }
 .tags li { border: 1.5px solid var(--ligne); border-radius: 999px; padding: .5rem 1.1rem; font-size: .9rem; font-weight: 500; }
@@ -139,7 +157,7 @@ nav a:hover { color: var(--jaune); }
 
 /* ---------- Chiffres ---------- */
 .stats div { display: flex; flex-direction: column; }
-.stats strong { font-size: clamp(2.4rem, 5vw, 3.6rem); font-weight: 900; line-height: 1; }
+.stats strong { font-size: clamp(2.4rem, 5vw, 3.6rem); font-weight: 700; line-height: 1; }
 .stats span { font-weight: 500; }
 
 /* ---------- Programme ---------- */
@@ -148,13 +166,13 @@ nav a:hover { color: var(--jaune); }
   display: grid; grid-template-columns: 90px 1fr; gap: 1rem;
   padding: .85rem 0; border-bottom: 1px solid var(--ligne);
 }
-.timeline time { color: var(--jaune); font-weight: 900; }
+.timeline time { color: var(--jaune); font-weight: 700; }
 .timeline li:hover span { color: var(--jaune-doux); }
 
 /* ---------- Bannière « Démarque-toi » (affiche 2) ---------- */
 .banner { padding: clamp(4rem, 9vw, 7rem) 0; background: var(--noir); }
-.banner h2 { font-weight: 900; font-size: clamp(2.4rem, 6vw, 4.4rem); }
-.banner h2 .thin { font-weight: 900; color: var(--blanc); }
+.banner h2 { font-weight: 700; font-size: clamp(2.4rem, 6vw, 4.4rem); }
+.banner h2 .thin { font-weight: 700; color: var(--blanc); }
 .banner h2 .light { font-weight: 300; color: var(--blanc); }
 .banner h2 strong { display: block; color: var(--jaune); font-size: 1.5em; }
 .banner .lead b { color: var(--jaune); }
@@ -185,6 +203,8 @@ details p { margin: .8rem 0 0; color: #d4d4d4; }
   .grid-3 { grid-template-columns: repeat(2, 1fr); }
   .infos { grid-template-columns: repeat(2, 1fr); }
   .split { grid-template-columns: 1fr; }
+  .bg-section::before { width: 100%; opacity: .28; -webkit-mask-image: none; mask-image: none; }
+  .bg-text { max-width: none; }
   .banner .poster { order: -1; max-width: 480px; }
   .burger { display: flex; flex-direction: column; gap: 5px; cursor: pointer; padding: .4rem; }
   .burger i { width: 26px; height: 2px; background: var(--blanc); transition: .25s; }
