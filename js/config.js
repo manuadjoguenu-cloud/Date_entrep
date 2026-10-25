@@ -6,7 +6,7 @@ window.SITE = {
   whatsapp: "22892604260",        // numéro WhatsApp, sans + ni espaces
   email: "",                      // ex : "contact@dateentrepreneur.com"
   facebook: "",                   // ex : "https://www.facebook.com/votrepage"
-  instagram: "",                  // ex : "https://www.instagram.com/votrecompte"
+  instagram: "https://www.instagram.com/dateentrepreneur/",                  // ex : "https://www.instagram.com/votrecompte"
   linkedin: "",                   // ex : "https://www.linkedin.com/company/votrepage"
   tiktok: "",
   youtube: "",
