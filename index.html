@@ -15,6 +15,8 @@
   <link rel="stylesheet" href="css/accueil.css">
 </head>
 <body>
+<a class="skip" href="#main">Aller au contenu</a>
+<div class="progress" aria-hidden="true"></div>
 
 <header class="site-header">
   <a href="#accueil" class="logo" aria-label="Date Entrepreneur — retour à l'accueil"><img src="media/logo.png" alt="Date Entrepreneur, 2e édition" width="660" height="279"></a>
@@ -33,17 +35,42 @@
   </nav>
 </header>
 
-<main>
+<main id="main">
 
 <!-- ACCUEIL -->
 <section id="accueil" class="hero">
-  <div class="container">
+  <div class="hero-art" aria-hidden="true">
+    <svg viewBox="0 0 400 440" xmlns="http://www.w3.org/2000/svg">
+      <defs><radialGradient id="gl" cx="50%" cy="40%" r="50%"><stop offset="0" stop-color="#FFB901" stop-opacity=".5"/><stop offset="1" stop-color="#FFB901" stop-opacity="0"/></radialGradient></defs>
+      <circle class="glow" cx="200" cy="170" r="190" fill="url(#gl)"/>
+      <g class="bulb">
+        <g stroke="#FFB901" stroke-width="4" stroke-linecap="round" opacity=".8"><line x1="200" y1="42" x2="200" y2="18"/><line x1="264" y1="59" x2="276" y2="38"/><line x1="136" y1="59" x2="124" y2="38"/><line x1="311" y1="106" x2="332" y2="94"/><line x1="89" y1="106" x2="68" y2="94"/><line x1="328" y1="170" x2="352" y2="170"/><line x1="72" y1="170" x2="48" y2="170"/></g>
+        <path d="M200 70C146 70 108 112 108 164c0 36 18 58 36 80 11 14 14 24 14 40h84c0-16 3-26 14-40 18-22 36-44 36-80 0-52-38-94-92-94z" fill="#FFB901" fill-opacity=".13" stroke="#FFB901" stroke-width="4"/>
+        <path d="M172 284v-52l14-30 14 32 14-32 14 30v52" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <rect x="158" y="290" width="84" height="14" rx="5" fill="#fff"/>
+        <rect x="166" y="310" width="68" height="14" rx="5" fill="#fff" opacity=".85"/>
+        <rect x="178" y="330" width="44" height="16" rx="8" fill="#fff" opacity=".7"/>
+        <circle cx="318" cy="96" r="7" fill="#FFB901"/><circle cx="92" cy="120" r="4" fill="#FFB901" opacity=".7"/><circle cx="330" cy="220" r="4" fill="#fff" opacity=".6"/>
+      </g>
+    </svg>
+  </div>
+    <div class="container">
     <p class="eyebrow">Date Entrepreneur — 2<sup>e</sup> édition</p>
     <h1>Venez avec une idée. <span>Repartez avec une opportunité.</span></h1>
     <p class="lead">Le 19 décembre 2026, retrouvons-nous au Bio Hôtel à Lomé pour une expérience dédiée à celles et ceux qui entreprennent, innovent, développent des projets ou souhaitent élargir leur réseau. Une rencontre pour apprendre, découvrir des initiatives, présenter ses idées et créer des connexions utiles.</p>
+    <div class="countdown" id="countdown" role="timer" aria-label="Compte à rebours avant l'évènement">
+      <p class="countdown-label">L'évènement commence dans</p>
+      <div class="countdown-grid">
+        <div><strong data-u="d">--</strong><span>jours</span></div>
+        <div><strong data-u="h">--</strong><span>heures</span></div>
+        <div><strong data-u="m">--</strong><span>minutes</span></div>
+        <div><strong data-u="s">--</strong><span>secondes</span></div>
+      </div>
+    </div>
     <div class="actions">
       <a class="btn btn-primary" href="#contact" id="participer">Participer à l'évènement</a>
       <a class="btn btn-outline" href="#partenaires" id="partenaire">Devenir partenaire</a>
+      <a class="link-cal" href="evenement.ics" download>+ Ajouter à mon agenda</a>
     </div>
     <div class="infos">
       <div><h3>Date</h3><p>Samedi 19 décembre 2026</p></div>
@@ -75,10 +102,10 @@
     <h2>Un rendez-vous, <span>plusieurs possibilités.</span></h2>
     <p class="lead">Que vous ayez déjà lancé votre activité ou que vous soyez encore au stade de l'idée, DATE ENTREPRENEUR vous offre un cadre pour avancer, échanger et rencontrer les bonnes personnes.</p>
     <div class="grid grid-4">
-      <article class="card"><h3>Apprendre</h3><p>Explorez des sujets concrets liés à l'entrepreneuriat, à l'image de marque et aux outils numériques à travers des échanges et des démonstrations pratiques.</p></article>
-      <article class="card"><h3>Faire découvrir son activité</h3><p>Présentez vos solutions, rencontrez des personnes intéressées par votre travail et recueillez des retours pour faire progresser votre projet.</p></article>
-      <article class="card"><h3>Élargir son réseau</h3><p>Échangez avec des entrepreneurs, des professionnels, des experts et des partenaires potentiels dans une atmosphère pensée pour faciliter les rencontres.</p></article>
-      <article class="card"><h3>Saisir de nouvelles perspectives</h3><p>Identifiez des contacts, des pistes de collaboration ou des ressources qui peuvent contribuer à la prochaine étape de votre parcours.</p></article>
+      <article class="card"><span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5C4 5.5 7 4 12 6c5-2 8-.5 8-.5V18s-3-1.5-8 .5c-5-2-8-.5-8-.5z"/><path d="M12 6v12.5"/></svg></span><h3>Apprendre</h3><p>Explorez des sujets concrets liés à l'entrepreneuriat, à l'image de marque et aux outils numériques à travers des échanges et des démonstrations pratiques.</p></article>
+      <article class="card"><span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9l1.5-5h13L20 9"/><path d="M4 9v11h16V9"/><path d="M4 9c0 1.7 1.3 3 2.7 3S9.3 10.7 9.3 9c0 1.7 1.3 3 2.7 3s2.7-1.3 2.7-3c0 1.7 1.3 3 2.7 3S20 10.7 20 9"/><path d="M10 20v-5h4v5"/></svg></span><h3>Faire découvrir son activité</h3><p>Présentez vos solutions, rencontrez des personnes intéressées par votre travail et recueillez des retours pour faire progresser votre projet.</p></article>
+      <article class="card"><span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="6" r="2.5"/><circle cx="5.5" cy="17" r="2.5"/><circle cx="18.5" cy="17" r="2.5"/><path d="M11 8.2L6.6 14.8M13 8.2l4.4 6.6M8 17h8"/></svg></span><h3>Élargir son réseau</h3><p>Échangez avec des entrepreneurs, des professionnels, des experts et des partenaires potentiels dans une atmosphère pensée pour faciliter les rencontres.</p></article>
+      <article class="card"><span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17l5-5 4 4 7-8"/><path d="M14 8h6v6"/></svg></span><h3>Saisir de nouvelles perspectives</h3><p>Identifiez des contacts, des pistes de collaboration ou des ressources qui peuvent contribuer à la prochaine étape de votre parcours.</p></article>
     </div>
   </div>
 </section>
@@ -89,10 +116,10 @@
     <p class="eyebrow">L'expérience</p>
     <h2>Apprendre. Exposer. Pitcher. <span>Connecter.</span></h2>
     <div class="grid grid-2">
-      <article class="card"><h3>Les panels</h3><p>Des conversations accessibles et pratiques pour mieux comprendre les réalités du terrain, partager des expériences et repartir avec des idées applicables.</p></article>
-      <article class="card"><h3>L'espace Discover</h3><p>Un espace dédié aux projets, produits et services. Découvrez des entrepreneurs, échangez avec les exposants et explorez des initiatives qui méritent d'être connues.</p></article>
-      <article class="card"><h3>The Pitch</h3><p>Huit projets sélectionnés auront chacun trois minutes pour présenter leur initiative au public et aux investisseurs présents. Un moment pour faire découvrir leur potentiel et susciter des échanges.</p></article>
-      <article class="card"><h3>Les connexions</h3><p>Le networking est au cœur de l'évènement. Des moments libres et six tables thématiques permettront aux participants de se retrouver autour d'intérêts communs.</p></article>
+      <article class="card"><span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h11v8H9l-3 3v-3H4z"/><path d="M17 9h3v8h-2v3l-3-3h-4v-2"/></svg></span><h3>Les panels</h3><p>Des conversations accessibles et pratiques pour mieux comprendre les réalités du terrain, partager des expériences et repartir avec des idées applicables.</p></article>
+      <article class="card"><span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.2-4.2"/></svg></span><h3>L'espace Discover</h3><p>Un espace dédié aux projets, produits et services. Découvrez des entrepreneurs, échangez avec les exposants et explorez des initiatives qui méritent d'être connues.</p></article>
+      <article class="card"><span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0014 0M12 18v3M9 21h6"/></svg></span><h3>The Pitch</h3><p>Huit projets sélectionnés auront chacun trois minutes pour présenter leur initiative au public et aux investisseurs présents. Un moment pour faire découvrir leur potentiel et susciter des échanges.</p></article>
+      <article class="card"><span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="12" r="5"/><circle cx="15" cy="12" r="5"/></svg></span><h3>Les connexions</h3><p>Le networking est au cœur de l'évènement. Des moments libres et six tables thématiques permettront aux participants de se retrouver autour d'intérêts communs.</p></article>
     </div>
     <h3 class="subtitle">Les tables thématiques</h3>
     <ul class="tags">
@@ -111,12 +138,24 @@
   <div class="container">
     <p class="eyebrow">À qui s'adresse l'évènement ?</p>
     <h2>Une même rencontre, <span>des profils complémentaires.</span></h2>
-    <div class="grid grid-3">
-      <article class="card"><h3>Porteurs de projets</h3><p>Pour confronter une idée à d'autres regards, et rencontrer des personnes capables de conseiller ou d'accompagner la suite.</p></article>
-      <article class="card"><h3>Entrepreneurs et dirigeants</h3><p>Pour faire connaître une activité, rencontrer d'autres acteurs économiques et explorer de nouvelles collaborations.</p></article>
-      <article class="card"><h3>Freelances et professionnels</h3><p>Pour mettre en valeur une expertise, développer son réseau et découvrir de nouvelles opportunités professionnelles.</p></article>
-      <article class="card"><h3>Investisseurs et structures d'accompagnement</h3><p>Pour découvrir des initiatives, échanger avec les porteurs de projets et identifier des perspectives d'accompagnement ou de partenariat.</p></article>
-      <article class="card"><h3>Futurs entrepreneurs et curieux</h3><p>Pour s'inspirer de parcours variés, poser ses questions et mieux comprendre les premières étapes de l'entrepreneuriat.</p></article>
+    <div class="people-art" role="img" aria-label="Cinq profils différents, étudiant, entrepreneur, freelance, investisseur et curieuse, reliés par un fil jaune lumineux">
+      <svg viewBox="0 0 1000 232" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+        <defs>
+          <linearGradient id="sil" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2a2a2a"/><stop offset="1" stop-color="#0c0c0c"/></linearGradient>
+          <filter id="blur" x="-5%" y="-300%" width="110%" height="700%"><feGaussianBlur stdDeviation="6"/></filter>
+        </defs>
+        <g transform="translate(120,0)"><g class="person"><circle cx="0" cy="46" r="22" fill="url(#sil)"/><path d="M-40 232V122Q-40 78 0 78Q40 78 40 122V232Z" fill="url(#sil)"/><rect x="22" y="100" width="30" height="64" rx="12" fill="#2b2b2b"/></g></g><g transform="translate(310,0)"><g class="person"><circle cx="0" cy="46" r="22" fill="url(#sil)"/><path d="M-40 232V122Q-40 78 0 78Q40 78 40 122V232Z" fill="url(#sil)"/><path d="M0 82l-7 14 7 52 7-52z" fill="#FFB901"/><path d="M-22 84l22 40-4-44zM22 84l-22 40 4-44z" fill="#303030"/></g></g><g transform="translate(500,0)"><g class="person"><circle cx="0" cy="46" r="22" fill="url(#sil)"/><path d="M-40 232V122Q-40 78 0 78Q40 78 40 122V232Z" fill="url(#sil)"/><rect x="-34" y="150" width="68" height="40" rx="4" fill="#2f2f2f"/><rect x="-27" y="156" width="54" height="26" rx="2" fill="#FFB901" opacity=".85"/></g></g><g transform="translate(690,0)"><g class="person"><circle cx="0" cy="46" r="22" fill="url(#sil)"/><path d="M-40 232V122Q-40 78 0 78Q40 78 40 122V232Z" fill="url(#sil)"/><rect x="-52" y="170" width="38" height="28" rx="4" fill="#2f2f2f"/><path d="M-44 170v-6h22v6" fill="none" stroke="#2f2f2f" stroke-width="4"/></g></g><g transform="translate(880,0)"><g class="person"><circle cx="0" cy="46" r="22" fill="url(#sil)"/><path d="M-40 232V122Q-40 78 0 78Q40 78 40 122V232Z" fill="url(#sil)"/><circle cx="0" cy="18" r="12" fill="url(#sil)"/><path d="M-6 -12l3 8 8 3-8 3-3 8-3-8-8-3 8-3z" fill="#FFB901" transform="translate(30,-6) scale(1.7)"/></g></g>
+        <line class="line-glow" x1="0" y1="132" x2="1000" y2="132" stroke="#FFB901" stroke-width="10" opacity=".55" filter="url(#blur)"/>
+        <line class="line-draw" pathLength="1" x1="0" y1="132" x2="1000" y2="132" stroke="#FFB901" stroke-width="3" stroke-linecap="round"/>
+        <circle cx="120" cy="132" r="6" fill="#FFB901"/><circle cx="120" cy="132" r="12" fill="#FFB901" opacity=".25"/><circle cx="310" cy="132" r="6" fill="#FFB901"/><circle cx="310" cy="132" r="12" fill="#FFB901" opacity=".25"/><circle cx="500" cy="132" r="6" fill="#FFB901"/><circle cx="500" cy="132" r="12" fill="#FFB901" opacity=".25"/><circle cx="690" cy="132" r="6" fill="#FFB901"/><circle cx="690" cy="132" r="12" fill="#FFB901" opacity=".25"/><circle cx="880" cy="132" r="6" fill="#FFB901"/><circle cx="880" cy="132" r="12" fill="#FFB901" opacity=".25"/>
+      </svg>
+    </div>
+        <div class="grid grid-3">
+      <article class="card"><span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 00-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0012 3z"/></svg></span><h3>Porteurs de projets</h3><p>Pour confronter une idée à d'autres regards, et rencontrer des personnes capables de conseiller ou d'accompagner la suite.</p></article>
+      <article class="card"><span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a1 1 0 011-1h4a1 1 0 011 1v2M3 13h18"/></svg></span><h3>Entrepreneurs et dirigeants</h3><p>Pour faire connaître une activité, rencontrer d'autres acteurs économiques et explorer de nouvelles collaborations.</p></article>
+      <article class="card"><span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="11" rx="1.5"/><path d="M2 20h20"/></svg></span><h3>Freelances et professionnels</h3><p>Pour mettre en valeur une expertise, développer son réseau et découvrir de nouvelles opportunités professionnelles.</p></article>
+      <article class="card"><span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 20V12M12 20V6M19 20V10"/><path d="M3 20h18"/></svg></span><h3>Investisseurs et structures d'accompagnement</h3><p>Pour découvrir des initiatives, échanger avec les porteurs de projets et identifier des perspectives d'accompagnement ou de partenariat.</p></article>
+      <article class="card"><span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21v-9"/><path d="M12 12c0-4 3-6 7-6 0 4-3 6-7 6z"/><path d="M12 15c0-3-2.5-5-6-5 0 3 2.5 5 6 5z"/></svg></span><h3>Futurs entrepreneurs et curieux</h3><p>Pour s'inspirer de parcours variés, poser ses questions et mieux comprendre les premières étapes de l'entrepreneuriat.</p></article>
     </div>
   </div>
 </section>
@@ -171,12 +210,12 @@
     <h2>Votre projet mérite <span>d'être découvert.</span></h2>
     <div class="grid grid-2">
       <article class="card">
-        <h3>Exposer à DATE ENTREPRENEUR</h3>
+        <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9l1.5-5h13L20 9"/><path d="M4 9v11h16V9"/><path d="M4 9c0 1.7 1.3 3 2.7 3S9.3 10.7 9.3 9c0 1.7 1.3 3 2.7 3s2.7-1.3 2.7-3c0 1.7 1.3 3 2.7 3S20 10.7 20 9"/><path d="M10 20v-5h4v5"/></svg></span><h3>Exposer à DATE ENTREPRENEUR</h3>
         <p>Vous développez un produit, un service ou une solution ? L'espace d'exposition vous permet de présenter votre activité, de rencontrer les visiteurs et de multiplier les échanges avec des partenaires ou clients potentiels. Environ quinze espaces sont envisagés pour cette édition.</p>
         <a class="btn btn-primary" href="#contact">Manifester mon intérêt pour un stand</a>
       </article>
       <article class="card">
-        <h3>Participer à The Pitch</h3>
+        <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0014 0M12 18v3M9 21h6"/></svg></span><h3>Participer à The Pitch</h3>
         <p>Vous portez un projet que vous souhaitez faire connaître ? Huit projets seront sélectionnés pour une présentation de trois minutes devant le public et les investisseurs présents. L'objectif : valoriser votre initiative et favoriser des prises de contact pertinentes.</p>
         <p class="note">Les modalités de candidature, les critères de sélection et les dates limites seront communiqués par l'organisation. La participation au pitch ne garantit pas l'obtention d'un financement.</p>
         <a class="btn btn-primary" href="#contact">Être informé des candidatures</a>
@@ -192,8 +231,8 @@
     <h2>Construisons ensemble <span>des opportunités.</span></h2>
     <p class="lead">Soutenir DATE ENTREPRENEUR, c'est contribuer à la création d'un cadre où entrepreneurs, talents, experts et acteurs économiques peuvent se rencontrer. C'est aussi l'occasion pour votre organisation de se rapprocher d'une communauté entrepreneuriale, de valoriser ses engagements et de présenter ses solutions dans un contexte propice aux échanges.</p>
     <div class="grid grid-2">
-      <article class="card"><h3>Des partenariats adaptés</h3><p>Notre équipe étudie les contributions financières, techniques, logistiques, médiatiques et en nature. Les collaborations peuvent également être associées à des temps forts de l'évènement : pitch, networking, espaces de découverte, supports de communication ou moment convivial.</p></article>
-      <article class="card"><h3>Une visibilité pensée dans la durée</h3><p>Selon la formule convenue, les partenaires peuvent bénéficier d'une présence dans la communication avant l'évènement, d'une valorisation sur place et de mentions dans les contenus récapitulatifs après l'édition.</p></article>
+      <article class="card"><span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M10 14a4 4 0 005.7 0l3-3a4 4 0 00-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 00-5.7 0l-3 3a4 4 0 005.7 5.7l1-1"/></svg></span><h3>Des partenariats adaptés</h3><p>Notre équipe étudie les contributions financières, techniques, logistiques, médiatiques et en nature. Les collaborations peuvent également être associées à des temps forts de l'évènement : pitch, networking, espaces de découverte, supports de communication ou moment convivial.</p></article>
+      <article class="card"><span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></span><h3>Une visibilité pensée dans la durée</h3><p>Selon la formule convenue, les partenaires peuvent bénéficier d'une présence dans la communication avant l'évènement, d'une valorisation sur place et de mentions dans les contenus récapitulatifs après l'édition.</p></article>
     </div>
     <div class="actions">
       <a class="btn btn-primary" href="#contact">Devenir partenaire</a>
@@ -229,7 +268,21 @@
 
 <!-- CONTACT -->
 <section id="contact" class="section contact">
-  <div class="container">
+  <div class="contact-art" aria-hidden="true">
+    <svg viewBox="0 0 400 520" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="lt" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFD04D"/><stop offset="1" stop-color="#FFB901"/></linearGradient>
+        <linearGradient id="fl" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFB901" stop-opacity=".55"/><stop offset="1" stop-color="#FFB901" stop-opacity="0"/></linearGradient>
+      </defs>
+      <polygon points="120,420 280,420 390,520 10,520" fill="url(#fl)"/>
+      <rect x="108" y="38" width="184" height="384" rx="6" fill="#0b0b0b" stroke="#3a3a3a" stroke-width="4"/>
+      <rect x="122" y="52" width="156" height="368" fill="url(#lt)"/>
+      <polygon points="292,38 346,70 346,448 292,422" fill="#141414" stroke="#3a3a3a" stroke-width="3"/>
+      <circle cx="334" cy="252" r="5" fill="#FFB901"/>
+      <g fill="#050505"><circle cx="200" cy="188" r="17"/><path d="M174 214Q174 204 188 204H212Q226 204 226 214V316H174Z" rx="10"/><rect x="180" y="316" width="16" height="104"/><rect x="204" y="316" width="16" height="104"/></g>
+    </svg>
+  </div>
+    <div class="container">
     <h2>Et si votre prochaine opportunité <span>commençait ici ?</span></h2>
     <p class="lead">Une idée à partager, un projet à faire découvrir, des compétences à valoriser ou simplement l'envie de rencontrer de nouvelles personnes ? DATE ENTREPRENEUR vous donne rendez-vous le 19 décembre 2026 au Bio Hôtel, à Lomé.</p>
     <p class="tagline">Venez avec une idée. Repartez avec une opportunité.</p>
@@ -251,8 +304,16 @@
   </div>
 </footer>
 
+<a class="fab-wa" href="https://wa.me/22892604260?text=Bonjour%2C%20je%20souhaite%20en%20savoir%20plus%20sur%20Date%20Entrepreneur." target="_blank" rel="noopener" aria-label="Nous écrire sur WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm0 18.2a8.2 8.2 0 01-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1112 20.200zm4.5-6.1c-.2-.1-1.500-.7-1.700-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.200-.3.200-.5.100a6.700 6.700 0 01-3.300-2.900c-.2-.4.200-.4.700-1.300.1-.2 0-.3 0-.5l-.8-1.800c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 00-.7.300 3 3 0 00-.9 2.200c0 1.300.9 2.600 1.100 2.800.1.200 1.900 2.900 4.600 4 1.700.7 2.400.8 3.200.7.500-.1 1.500-.6 1.700-1.200.2-.6.200-1.100.2-1.200-.1-.2-.3-.2-.5-.3z"/></svg>
+</a>
+<button class="backtop" type="button" aria-label="Revenir en haut de la page">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+
 <script src="js/gsap.min.js"></script>
 <script src="js/ScrollTrigger.min.js"></script>
+<script src="js/ux.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>
