@@ -44,16 +44,17 @@
     email: '<rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/>',
     facebook: '<path d="M14 8h2V4h-2.5A3.5 3.5 0 0010 7.5V10H8v4h2v7h4v-7h2.2l.8-4H14V7.8c0-.5.3-.8.8-.8z" fill="currentColor" stroke="none"/>',
     instagram: '<rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/>',
+    whatsapp: '<path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm0 18.2a8.2 8.2 0 01-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1112 20.200zm4.5-6.1c-.2-.1-1.500-.7-1.700-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.200-.3.200-.5.100a6.700 6.700 0 01-3.300-2.900c-.2-.4.200-.4.700-1.300.1-.2 0-.3 0-.5l-.8-1.800c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 00-.7.300 3 3 0 00-.9 2.200c0 1.300.9 2.600 1.100 2.800.1.200 1.900 2.900 4.600 4 1.700.7 2.400.8 3.200.7.500-.1 1.500-.6 1.700-1.200.2-.6.200-1.100.2-1.200-.1-.2-.3-.2-.5-.3z" fill="currentColor" stroke="none"/>',
     linkedin: '<path d="M4 9h4v11H4zM6 4a2 2 0 110 4 2 2 0 010-4zM10 9h4v1.6c.6-1 1.8-1.8 3.4-1.8 3 0 3.6 2 3.6 4.6V20h-4v-5.8c0-1.4-.2-2.4-1.6-2.4s-1.4 1.3-1.4 2.4V20h-4z" fill="currentColor" stroke="none"/>',
     tiktok: '<path d="M14 4v10.5a3.5 3.5 0 11-3.5-3.5M14 4c.4 2.5 2 4 4.5 4.2"/>',
     youtube: '<rect x="2.5" y="6" width="19" height="12" rx="3.5"/><path d="M10 9.5v5l4.5-2.5z" fill="currentColor"/>'
   };
-  var LABELS = { email: "E-mail", facebook: "Facebook", instagram: "Instagram", linkedin: "LinkedIn", tiktok: "TikTok", youtube: "YouTube" };
+  var LABELS = { email: "E-mail", facebook: "Facebook", instagram: "Instagram", whatsapp: "WhatsApp", linkedin: "LinkedIn", tiktok: "TikTok", youtube: "YouTube" };
   document.querySelectorAll("[data-socials]").forEach(function (box) {
     Object.keys(ICONS).forEach(function (k) {
       if (!C[k]) return;
       var a = document.createElement("a");
-      a.href = k === "email" ? "mailto:" + C[k] : C[k];
+      a.href = k === "email" ? "mailto:" + C[k] : k === "whatsapp" ? "https://wa.me/" + C[k] : C[k];
       if (k !== "email") { a.target = "_blank"; a.rel = "noopener"; }
       a.setAttribute("aria-label", LABELS[k]); a.title = LABELS[k];
       a.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' + ICONS[k] + '</svg>';
